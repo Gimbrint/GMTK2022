@@ -54,9 +54,9 @@ class Enemy(Object):
 
 		# Enemies can only move x tiles around the point where they spawned
 		#
-		# |				|
-		# |--E----		|
-		# |				|
+		# |             |
+		# |--E----      |
+		# |             |
 		clampSize = 75
 		self.leftClamp = xPos - clampSize
 		self.rightClamp = xPos + clampSize
@@ -217,7 +217,7 @@ def main() -> None:
 
 			screen.blit(playerBulletSprite, bulletRect)
 
-		# Remove bullets that are gone, yes i know it's bad, it's there to because when you remove an entry from an array,
+		# Remove bullets that are gone, yes i know it's bad, it's there because when you remove an entry from an array,
 		# it moves all entries above it down, and so it skips an entry
 		for bullet in bulletsToRemove:
 			playerBullets.remove(bullet)
